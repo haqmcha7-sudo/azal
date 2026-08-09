@@ -1,0 +1,2492 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>AZAL Honey — العسل الصافي خيرات بلادي | Premium Moroccan Honey</title>
+  <meta name="description"
+    content="AZAL Honey — Pure Moroccan honey and local treasures. Lemon Honey, Daghmous Honey, Carob Honey & Olive Oil. 100% natural, proudly Moroccan. Free delivery inside Casablanca." />
+  <meta name="theme-color" content="#121412" />
+  <meta property="og:title" content="AZAL Honey — العسل الصافي خيرات بلادي" />
+  <meta property="og:description" content="Pure Moroccan goodness in every drop. خيرات بلادي، في كل قطرة." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="layout/limon.png" />
+  <link rel="icon" type="image/png" href="layout/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Manrope:wght@400;500;600;700;800&family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap"
+    rel="stylesheet" />
+  <style>
+    /* ==========================================================================
+   AZAL HONEY — single-file site
+   Palette: Forest Moss, Honey Gold, Burnt Amber, Cream Silk
+   ========================================================================== */
+
+    :root {
+      --moss-950: #0d0f0d;
+      --moss-900: #121412;
+      --moss-850: #161916;
+      --moss-800: #1a1c1a;
+      --moss-700: #1f201e;
+      --moss-600: #292a29;
+      --moss-500: #343533;
+
+      --cream-0: #f3efe4;
+      --cream-1: #e9e3d4;
+      --cream-2: #ddd3bd;
+      --cream-3: #cbbda0;
+
+      --gold: #f2ca50;
+      --gold-deep: #d4af37;
+      --gold-dim: rgba(212, 175, 55, 0.30);
+      --gold-faint: rgba(212, 175, 55, 0.10);
+
+      --amber: #fec381;
+      --amber-deep: #dfa868;
+
+      --text: #e3e2e0;
+      --text-soft: #d0c5af;
+      --text-muted: #99907c;
+
+      --ink: #2a2b28;
+      --ink-soft: #4a4b45;
+
+      --hero-bg: #bdb8b0;
+
+      --font-display: "Playfair Display", Georgia, serif;
+      --font-body: "Manrope", system-ui, sans-serif;
+      --font-ar-display: "Amiri", serif;
+      --font-ar-body: "Tajawal", system-ui, sans-serif;
+
+      --r-sm: 0.125rem;
+      --r: 0.25rem;
+      --r-md: 0.375rem;
+      --r-lg: 0.5rem;
+      --r-xl: 0.75rem;
+
+      --container: 1280px;
+      --gutter: 24px;
+      --margin-d: 64px;
+      --margin-m: 16px;
+      --nav-h: 84px;
+      --nav-h-compact: 64px;
+
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+      --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    /* ------------------------- RESET / BASE ------------------------- */
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--nav-h) + 16px);
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: var(--moss-900);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: clip;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+      margin: 0;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+      background: none;
+      border: 0;
+      color: inherit;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    ::selection {
+      background: var(--gold-deep);
+      color: var(--moss-950);
+    }
+
+    [lang="ar"] body {
+      font-family: var(--font-ar-body);
+      line-height: 1.75;
+    }
+
+    [lang="ar"] .display-2,
+    [lang="ar"] .hero__wordmark,
+    [lang="ar"] .hero__product-name,
+    [lang="ar"] .story__title,
+    [lang="ar"] .order h2,
+    [lang="ar"] .quality__item h3,
+    [lang="ar"] .footer__name,
+    [lang="ar"] .mobile-menu a,
+    [lang="ar"] .nav__wordmark strong {
+      font-family: var(--font-ar-display);
+      letter-spacing: 0;
+    }
+
+    /* ------------------------- TYPOGRAPHY ------------------------- */
+
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+    }
+
+    [lang="ar"] .eyebrow {
+      letter-spacing: 0.04em;
+      text-transform: none;
+    }
+
+    .display-2 {
+      font-family: var(--font-display);
+      font-size: clamp(34px, 5vw, 52px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    [lang="ar"] .display-2 {
+      font-size: clamp(38px, 5.5vw, 58px);
+      line-height: 1.3;
+    }
+
+    .display-en {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
+
+    [lang="ar"] .display-en {
+      letter-spacing: 0.08em;
+    }
+
+    .lead {
+      font-size: 17px;
+      color: var(--text-soft);
+      max-width: 52ch;
+    }
+
+    [lang="ar"] .lead {
+      font-size: 18px;
+    }
+
+    /* ------------------------- BUTTONS ------------------------- */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 26px;
+      border-radius: var(--r);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      line-height: 1;
+      border: 1px solid transparent;
+      transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out),
+        background-color 0.35s var(--ease-out), color 0.35s var(--ease-out),
+        border-color 0.35s var(--ease-out);
+      white-space: nowrap;
+    }
+
+    [lang="ar"] .btn {
+      letter-spacing: 0.02em;
+      text-transform: none;
+    }
+
+    .btn--gold {
+      background: var(--gold);
+      color: #3c2f00;
+    }
+
+    .btn--gold:hover {
+      background: #ffd95e;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px -14px rgba(242, 202, 80, 0.55);
+    }
+
+    .btn--ghost {
+      border-color: var(--gold-dim);
+      color: var(--text);
+      background: transparent;
+    }
+
+    .btn--ghost:hover {
+      border-color: var(--gold-deep);
+      background: var(--gold-faint);
+      transform: translateY(-2px);
+    }
+
+    .btn--sm {
+      padding: 11px 18px;
+      font-size: 11px;
+    }
+
+    .btn--lg {
+      padding: 17px 34px;
+      font-size: 13px;
+    }
+
+    .btn--block {
+      width: 100%;
+    }
+
+    .btn__tel {
+      letter-spacing: 0.1em;
+    }
+
+    [lang="ar"] .btn__tel {
+      letter-spacing: 0.04em;
+    }
+
+    /* ------------------------- NAVBAR ------------------------- */
+
+    .nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 100;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      transition: height 0.45s var(--ease-out), background-color 0.45s var(--ease-out),
+        backdrop-filter 0.45s var(--ease-out), box-shadow 0.45s var(--ease-out),
+        transform 0.45s var(--ease-inout);
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .nav--hidden {
+      transform: translateY(-100%);
+    }
+
+    .nav__inner {
+      width: 100%;
+      max-width: var(--container);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .nav--scrolled {
+      height: var(--nav-h-compact);
+      background: rgba(18, 20, 18, 0.78);
+      -webkit-backdrop-filter: blur(18px) saturate(1.2);
+      backdrop-filter: blur(18px) saturate(1.2);
+      color: var(--text);
+      box-shadow: 0 1px 0 var(--gold-faint);
+    }
+
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav__logo img {
+      width: 42px;
+      height: 42px;
+      transition: width 0.45s var(--ease-out), height 0.45s var(--ease-out);
+    }
+
+    .nav--scrolled .nav__logo img {
+      width: 34px;
+      height: 34px;
+    }
+
+    .nav__wordmark {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .nav__wordmark strong {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+    }
+
+    .nav__wordmark em {
+      font-style: normal;
+      font-family: var(--font-body);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.5em;
+      color: var(--gold-deep);
+      margin-top: 4px;
+    }
+
+    [lang="ar"] .nav__wordmark em {
+      letter-spacing: 0.2em;
+    }
+
+    .nav__links {
+      display: flex;
+      gap: clamp(18px, 2.6vw, 38px);
+    }
+
+    .nav__links a {
+      position: relative;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      padding-block: 6px;
+      opacity: 0.85;
+      transition: opacity 0.3s, color 0.3s;
+    }
+
+    [lang="ar"] .nav__links a {
+      letter-spacing: 0.01em;
+      font-size: 14px;
+    }
+
+    .nav__links a::after {
+      content: "";
+      position: absolute;
+      inset-inline-start: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.4s var(--ease-out);
+    }
+
+    .nav__links a:hover {
+      opacity: 1;
+    }
+
+    .nav__links a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .nav__actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      padding: 8px 4px;
+      opacity: 0.9;
+      transition: opacity 0.3s;
+    }
+
+    .lang-toggle:hover {
+      opacity: 1;
+    }
+
+    .lang-toggle__current {
+      color: var(--gold-deep);
+    }
+
+    .lang-toggle__divider {
+      opacity: 0.4;
+    }
+
+    .lang-toggle__other {
+      opacity: 0.7;
+    }
+
+    .nav__burger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 44px;
+      height: 44px;
+      padding: 10px;
+    }
+
+    .nav__burger span {
+      display: block;
+      height: 1.5px;
+      width: 100%;
+      background: currentColor;
+      transition: transform 0.4s var(--ease-out), opacity 0.3s;
+    }
+
+    .nav__burger[aria-expanded="true"] span:nth-child(1) {
+      transform: translateY(6.5px) rotate(45deg);
+    }
+
+    .nav__burger[aria-expanded="true"] span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav__burger[aria-expanded="true"] span:nth-child(3) {
+      transform: translateY(-6.5px) rotate(-45deg);
+    }
+
+    /* ------------------------- MOBILE MENU ------------------------- */
+
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      background: rgba(13, 15, 13, 0.97);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 48px;
+      padding: 110px var(--gutter) 48px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.45s var(--ease-inout), visibility 0.45s;
+    }
+
+    .mobile-menu.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu__links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .mobile-menu__links a {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 7vw, 40px);
+      font-weight: 600;
+      padding: 8px;
+      color: var(--text);
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out), color 0.3s;
+    }
+
+    .mobile-menu__links a:hover {
+      color: var(--gold);
+    }
+
+    .mobile-menu.is-open .mobile-menu__links a {
+      opacity: 1;
+      transform: none;
+    }
+
+    .mobile-menu__foot {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+      max-width: 340px;
+      margin-inline: auto;
+    }
+
+    .mobile-menu__note {
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* ------------------------- HERO — SCROLL SCRUB ------------------------- */
+
+    .hero-stage {
+      position: relative;
+      height: 250vh;
+    }
+
+    .hero {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      height: 100svh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background-color: var(--hero-bg);
+      background-image: url('AZAL_Lemon_Ho_frames/frame_001.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(100deg, rgba(243, 239, 228, 0.86) 0%, rgba(243, 239, 228, 0.50) 34%, rgba(243, 239, 228, 0.10) 70%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero__copy {
+      position: relative;
+      z-index: 1;
+      width: min(620px, 90vw);
+      margin-inline-start: clamp(20px, 5vw, 64px);
+      display: flex;
+      flex-direction: column;
+      gap: clamp(22px, 4.5vh, 44px);
+    }
+
+    .hero__overlay {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      will-change: opacity;
+    }
+
+    .hero__overlay--intro {
+      opacity: 1;
+    }
+
+    .hero__overlay--reveal {
+      opacity: 0;
+    }
+
+    .hero__brand {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .hero__eyebrow {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+    }
+
+    [lang="ar"] .hero__eyebrow {
+      letter-spacing: 0.1em;
+    }
+
+    .hero__wordmark {
+      font-family: var(--font-display);
+      font-size: clamp(52px, 5.6vw, 84px);
+      font-weight: 700;
+      line-height: 0.98;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+    }
+
+    .hero__wordmark span {
+      display: block;
+      font-size: 0.32em;
+      font-weight: 600;
+      letter-spacing: 0.6em;
+      color: var(--ink-soft);
+      margin-top: 10px;
+      margin-inline-start: 0.6em;
+    }
+
+    [lang="ar"] .hero__wordmark span {
+      letter-spacing: 0.2em;
+      margin-inline-start: 0.2em;
+    }
+
+    .hero__tagline {
+      font-family: var(--font-ar-display);
+      font-size: clamp(17px, 1.9vw, 22px);
+      font-weight: 700;
+      color: var(--ink-soft);
+    }
+
+    [lang="en"] .hero__tagline {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .hero__specs {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .hero__product-name {
+      font-family: var(--font-display);
+      font-size: clamp(30px, 3.4vw, 44px);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--ink);
+    }
+
+    [lang="ar"] .hero__product-name {
+      font-size: clamp(34px, 3.9vw, 50px);
+    }
+
+    .hero__product-en {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .hero__facts {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-block: 4px;
+    }
+
+    .hero__fact {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .hero__fact--price {
+      color: #7a5c00;
+    }
+
+    .hero__dot {
+      color: var(--gold-deep);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      padding: 7px 16px;
+    }
+
+    [lang="ar"] .badge {
+      letter-spacing: 0;
+    }
+
+    .badge--hex {
+      clip-path: polygon(8% 0, 92% 0, 100% 50%, 92% 100%, 8% 100%, 0 50%);
+      background: var(--gold);
+      color: #3c2f00;
+      padding-inline: 22px;
+    }
+
+    .hero__cta {
+      margin-top: 10px;
+    }
+
+    .hero__scrollhint {
+      position: absolute;
+      bottom: 30px;
+      inset-inline: 0;
+      text-align: center;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      animation: hint 2.4s var(--ease-inout) infinite;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    [lang="ar"] .hero__scrollhint {
+      letter-spacing: 0.08em;
+    }
+
+    @keyframes hint {
+
+      0%,
+      100% {
+        transform: translateY(0);
+        opacity: 0.55;
+      }
+
+      50% {
+        transform: translateY(8px);
+        opacity: 1;
+      }
+    }
+
+    /* ------------------------- MARQUEE ------------------------- */
+
+    .marquee {
+      direction: ltr;
+      background: var(--moss-900);
+      border-block: 1px solid var(--gold-faint);
+      padding-block: 26px;
+      overflow: hidden;
+    }
+
+    .marquee__track {
+      display: flex;
+      width: max-content;
+      animation: marquee 36s linear infinite;
+    }
+
+    .marquee__group {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      flex-shrink: 0;
+    }
+
+    .marquee__group span {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding-inline: 28px;
+      white-space: nowrap;
+    }
+
+    .marquee__group i {
+      font-style: normal;
+      font-size: 8px;
+      color: var(--gold-deep);
+    }
+
+    @keyframes marquee {
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* ------------------------- FEATURE — LEMON HONEY ------------------------- */
+
+    .feature {
+      background: var(--moss-900);
+      padding-block: clamp(96px, 13vw, 160px);
+    }
+
+    .feature__grid {
+      max-width: var(--container);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: clamp(48px, 7vw, 110px);
+      align-items: center;
+    }
+
+    .feature__media {
+      position: relative;
+      align-self: center;
+    }
+
+    .feature__media img {
+      position: relative;
+      width: 100%;
+      border-radius: var(--r);
+      z-index: 1;
+    }
+
+    .feature__halo {
+      position: absolute;
+      inset: -12%;
+      background: radial-gradient(50% 50% at 50% 42%, rgba(242, 202, 80, 0.30) 0%, rgba(242, 202, 80, 0.10) 38%, transparent 68%);
+      filter: blur(30px);
+    }
+
+    .feature__body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+    }
+
+    .feature__meta {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .feature__price {
+      font-size: 15px;
+      color: var(--text-soft);
+    }
+
+    .feature__price strong {
+      color: var(--gold);
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .feature__actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .benefit-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-block: 6px 12px;
+    }
+
+    .benefit-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      color: var(--text-soft);
+    }
+
+    .benefit-list li::before {
+      content: "";
+      width: 11px;
+      height: 12px;
+      flex-shrink: 0;
+      background: var(--gold);
+      clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+      opacity: 0.85;
+    }
+
+    [lang="ar"] .benefit-list li {
+      font-size: 16.5px;
+    }
+
+    /* ------------------------- STORY ------------------------- */
+
+    .story {
+      background: var(--cream-1);
+      color: var(--ink);
+      padding-block: clamp(100px, 14vw, 170px);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .story::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--gold-faint) 1px, transparent 1px),
+        linear-gradient(90deg, var(--gold-faint) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(60% 60% at 50% 40%, transparent 30%, rgba(0, 0, 0, 0.35) 100%);
+      -webkit-mask-image: radial-gradient(60% 60% at 50% 40%, transparent 30%, rgba(0, 0, 0, 0.35) 100%);
+      pointer-events: none;
+    }
+
+    .story__ornament {
+      position: relative;
+      color: var(--gold-deep);
+      margin-bottom: 26px;
+      display: flex;
+      justify-content: center;
+      animation: slowspin 24s linear infinite;
+    }
+
+    @keyframes slowspin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .story .display-2,
+    .story .eyebrow {
+      color: var(--ink);
+      position: relative;
+    }
+
+    .story .eyebrow {
+      color: var(--gold-deep);
+    }
+
+    .story__tagline {
+      position: relative;
+      font-family: var(--font-ar-display);
+      font-size: clamp(19px, 2.4vw, 24px);
+      color: var(--ink-soft);
+      margin-top: 16px;
+      font-weight: 700;
+    }
+
+    [lang="en"] .story__tagline {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .story__text {
+      position: relative;
+      max-width: 62ch;
+      margin: 26px auto 0;
+      font-size: 16.5px;
+      color: var(--ink-soft);
+    }
+
+    [lang="ar"] .story__text {
+      font-size: 18px;
+      line-height: 1.9;
+    }
+
+    .story__stats {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      gap: clamp(32px, 6vw, 90px);
+      margin-top: 54px;
+    }
+
+    .story__stat {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .story__stat strong {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 3.4vw, 38px);
+      font-weight: 700;
+      color: var(--gold-deep);
+    }
+
+    [lang="ar"] .story__stat strong {
+      font-family: var(--font-ar-display);
+    }
+
+    .story__stat span {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    [lang="ar"] .story__stat span {
+      letter-spacing: 0.03em;
+    }
+
+    /* ------------------------- PRODUCTS ------------------------- */
+
+    .products {
+      background: var(--moss-900);
+      padding-block: clamp(100px, 13vw, 160px);
+    }
+
+    .products__head {
+      max-width: var(--container);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+      margin-bottom: clamp(56px, 7vw, 96px);
+      text-align: center;
+    }
+
+    .products__grid {
+      max-width: var(--container);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: clamp(28px, 4.5vw, 64px);
+      row-gap: clamp(64px, 8vw, 112px);
+    }
+
+    .product {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .product__media {
+      position: relative;
+      border-radius: var(--r);
+      overflow: hidden;
+      background: var(--cream-1);
+      border: 1px solid var(--gold-dim);
+      box-shadow: 0 30px 80px -40px rgba(0, 0, 0, 0.75);
+    }
+
+    .product__media::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(58% 42% at 50% 46%, rgba(255, 220, 130, 0.5) 0%, transparent 70%);
+      mix-blend-mode: soft-light;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .product__media img {
+      width: 100%;
+      height: auto;
+      transition: transform 1.2s var(--ease-out);
+    }
+
+    .product:hover .product__media img {
+      transform: scale(1.035);
+    }
+
+    .product__badges {
+      position: absolute;
+      top: 14px;
+      inset-inline-start: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      z-index: 2;
+    }
+
+    .product__badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 6px 12px;
+      background: rgba(18, 20, 18, 0.82);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      color: var(--gold);
+      border: 1px solid var(--gold-dim);
+      border-radius: var(--r-sm);
+    }
+
+    [lang="ar"] .product__badge {
+      letter-spacing: 0;
+    }
+
+    .product__body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .product__meta {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .product__dot {
+      color: var(--gold-deep);
+    }
+
+    .product__price {
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 0.04em;
+    }
+
+    [lang="ar"] .product__price {
+      letter-spacing: 0;
+    }
+
+    .product__name {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 2.8vw, 32px);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--text);
+    }
+
+    [lang="ar"] .product__name {
+      font-family: var(--font-ar-display);
+      font-size: clamp(28px, 3.2vw, 36px);
+    }
+
+    .product__name-en {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    [lang="ar"] .product__name-en {
+      letter-spacing: 0.06em;
+    }
+
+    .product__desc {
+      font-size: 15px;
+      color: var(--text-soft);
+      max-width: 46ch;
+    }
+
+    [lang="ar"] .product__desc {
+      font-size: 16.5px;
+    }
+
+    .product__actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    /* ------------------------- QUALITY ------------------------- */
+
+    .quality {
+      background: var(--cream-1);
+      color: var(--ink);
+      padding-block: clamp(96px, 13vw, 150px);
+    }
+
+    .quality__head {
+      max-width: var(--container);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+      text-align: center;
+      margin-bottom: clamp(48px, 6vw, 80px);
+    }
+
+    .quality .display-2 {
+      color: var(--ink);
+    }
+
+    .quality .display-en {
+      color: var(--ink-soft);
+    }
+
+    .quality__grid {
+      max-width: 1080px;
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(20px, 3vw, 40px);
+    }
+
+    .quality__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+      padding: 34px 18px 30px;
+      border: 1px solid var(--gold-dim);
+      border-radius: var(--r);
+      background: rgba(255, 255, 255, 0.22);
+      transition: transform 0.5s var(--ease-out), background-color 0.5s var(--ease-out);
+    }
+
+    .quality__item:hover {
+      transform: translateY(-6px);
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    .quality__hex {
+      color: var(--gold-deep);
+      margin-bottom: 6px;
+    }
+
+    .quality__item h3 {
+      font-family: var(--font-display);
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    [lang="ar"] .quality__item h3 {
+      font-size: 21px;
+    }
+
+    .quality__item p {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    [lang="ar"] .quality__item p {
+      letter-spacing: 0.03em;
+    }
+
+    /* ------------------------- ORDER ------------------------- */
+
+    .order {
+      background:
+        radial-gradient(55% 75% at 50% 118%, rgba(212, 175, 55, 0.14) 0%, transparent 65%),
+        var(--moss-900);
+      padding-block: clamp(110px, 15vw, 190px);
+      text-align: center;
+    }
+
+    .order__inner {
+      max-width: 720px;
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .order__sub {
+      color: var(--text-soft);
+      font-size: 16.5px;
+    }
+
+    [lang="ar"] .order__sub {
+      font-size: 18px;
+    }
+
+    .order__actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 16px;
+    }
+
+    .order__note {
+      margin-top: 22px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--gold-deep);
+    }
+
+    [lang="ar"] .order__note {
+      letter-spacing: 0;
+    }
+
+    /* ------------------------- FOOTER ------------------------- */
+
+    .footer {
+      background: var(--moss-950);
+      border-top: 1px solid var(--gold-faint);
+      padding: clamp(64px, 9vw, 110px) 0 40px;
+    }
+
+    .footer__top {
+      max-width: var(--container);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: clamp(36px, 5vw, 80px);
+      padding-bottom: clamp(48px, 6vw, 80px);
+    }
+
+    .footer__brand {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .footer__brand img {
+      width: 64px;
+      height: 64px;
+    }
+
+    .footer__name {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--text);
+    }
+
+    .footer__name span {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.5em;
+      color: var(--gold-deep);
+      margin-top: 4px;
+    }
+
+    .footer__tagline {
+      font-family: var(--font-ar-display);
+      font-size: 16px;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    [lang="en"] .footer__tagline {
+      font-family: var(--font-body);
+      font-weight: 500;
+    }
+
+    .footer__col h4 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      margin-bottom: 22px;
+    }
+
+    [lang="ar"] .footer__col h4 {
+      letter-spacing: 0.05em;
+    }
+
+    .footer__col ul {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer__col a,
+    .footer__col li {
+      font-size: 14.5px;
+      color: var(--text-soft);
+      transition: color 0.3s;
+    }
+
+    .footer__col a:hover {
+      color: var(--gold);
+    }
+
+    [lang="ar"] .footer__col a,
+    [lang="ar"] .footer__col li {
+      font-size: 16px;
+    }
+
+    .footer__bottom {
+      max-width: var(--container);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+      border-top: 1px solid var(--gold-faint);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    .footer__madein {
+      letter-spacing: 0.06em;
+    }
+
+    [lang="ar"] .footer__madein {
+      letter-spacing: 0;
+    }
+
+    /* ------------------------- REVEAL ANIMATIONS ------------------------- */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      filter: blur(7px);
+      transition: opacity 1s var(--ease-out), transform 1s var(--ease-out), filter 1s var(--ease-out);
+      will-change: opacity, transform, filter;
+    }
+
+    .reveal.is-in {
+      opacity: 1;
+      transform: none;
+      filter: none;
+    }
+
+    /* ------------------------- RESPONSIVE ------------------------- */
+
+    @media (max-width: 1024px) {
+      .nav__links {
+        display: none;
+      }
+
+      .nav__burger {
+        display: flex;
+      }
+
+      .nav__cta {
+        display: none;
+      }
+
+      .hero-stage {
+        height: 200vh;
+      }
+
+      .hero {
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      .hero::before {
+        background: linear-gradient(0deg, rgba(243, 239, 228, 0.92) 0%, rgba(243, 239, 228, 0.62) 38%, rgba(243, 239, 228, 0.05) 72%);
+      }
+
+      .hero__copy {
+        margin-inline: auto;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+        padding: 0 var(--margin-m) calc(30px + env(safe-area-inset-bottom));
+      }
+
+      .hero__overlay,
+      .hero__brand,
+      .hero__specs {
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero__facts {
+        justify-content: center;
+      }
+
+      .hero__wordmark {
+        font-size: clamp(38px, 11vw, 54px);
+      }
+
+      .hero__tagline {
+        font-size: clamp(15px, 4.2vw, 19px);
+      }
+
+      .hero__product-name {
+        font-size: clamp(30px, 8vw, 44px);
+      }
+
+      .hero__scrollhint {
+        display: none;
+      }
+
+      .feature__grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .feature__media {
+        max-width: 460px;
+        margin-inline: auto;
+      }
+
+      .quality__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .footer__top {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        background-image: url("AZAL_Lemon_Ho_frames/mobile/frame_001.jpg");
+      }
+
+      .products__grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .product__media {
+        border-radius: var(--r-lg);
+      }
+
+      .story__stats {
+        gap: 28px;
+        flex-wrap: wrap;
+      }
+
+      .quality__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .quality__item {
+        padding: 26px 12px 24px;
+      }
+
+      .footer__top {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 44px;
+      }
+
+      .footer__bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .btn {
+        min-height: 48px;
+      }
+
+      .btn--lg {
+        padding: 16px 26px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .nav__wordmark em {
+        display: none;
+      }
+
+      .quality__grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero__facts {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    /* short phone screens — compact hero copy */
+    @media (max-width: 1024px) and (max-height: 700px) {
+      .hero__copy {
+        gap: 8px;
+        padding-bottom: calc(20px + env(safe-area-inset-bottom));
+      }
+
+      .hero__wordmark {
+        font-size: clamp(30px, 8vw, 40px);
+      }
+
+      .hero__tagline {
+        display: none;
+      }
+
+      .hero__eyebrow {
+        font-size: 9px;
+      }
+
+      .hero__facts {
+        margin-block: 0;
+      }
+
+      .hero__cta {
+        margin-top: 2px;
+      }
+    }
+
+    /* ------------------------- REDUCED MOTION ------------------------- */
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .hero-stage {
+        height: 100vh;
+      }
+
+      .marquee__track,
+      .story__ornament,
+      .hero__scrollhint {
+        animation: none;
+      }
+
+      .hero__overlay--reveal {
+        opacity: 1;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        transition: none;
+      }
+
+      .product:hover .product__media img {
+        transform: none;
+      }
+
+      .btn:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="#home" class="nav__logo" aria-label="AZAL Honey — Home">
+        <img src="layout/logo.png" alt="AZAL" width="44" height="44" />
+        <span class="nav__wordmark">
+          <strong>AZAL</strong>
+          <em data-i18n="nav_wordmark_sub">HONEY</em>
+        </span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#home" data-i18n="nav_home">الرئيسية</a>
+        <a href="#products" data-i18n="nav_products">المنتجات</a>
+        <a href="#story" data-i18n="nav_story">قصتنا</a>
+        <a href="#contact" data-i18n="nav_contact">تواصل معنا</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">
+          <span class="lang-toggle__current">EN</span>
+          <span class="lang-toggle__divider">|</span>
+          <span class="lang-toggle__other" data-i18n="lang_other">العربية</span>
+        </button>
+        <a class="btn btn--gold btn--sm nav__cta" data-order href="https://wa.me/212663313457" target="_blank"
+          rel="noopener">
+          <span data-i18n="order_now">اطلب الآن</span>
+        </a>
+        <button class="nav__burger" id="navBurger" type="button" aria-label="Menu" aria-expanded="false"
+          aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE MENU ============ -->
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <nav class="mobile-menu__links" aria-label="Mobile">
+      <a href="#home" data-i18n="nav_home">الرئيسية</a>
+      <a href="#products" data-i18n="nav_products">المنتجات</a>
+      <a href="#story" data-i18n="nav_story">قصتنا</a>
+      <a href="#contact" data-i18n="nav_contact">تواصل معنا</a>
+    </nav>
+    <div class="mobile-menu__foot">
+      <a class="btn btn--gold btn--block" data-order href="https://wa.me/212663313457" target="_blank" rel="noopener">
+        <span data-i18n="order_now">اطلب الآن</span>
+      </a>
+      <p class="mobile-menu__note" data-i18n="free_delivery">توصيل مجاني داخل الدار البيضاء</p>
+    </div>
+  </div>
+
+  <main id="home">
+
+    <!-- ============ HERO — SCROLL SCRUB ============ -->
+    <section class="hero-stage" id="heroStage" aria-label="AZAL Lemon Honey">
+      <div class="hero" id="hero">
+        <div class="hero__copy">
+          <div class="hero__overlay hero__overlay--intro" id="heroIntro">
+            <div class="hero__brand">
+              <p class="hero__eyebrow" data-i18n="hero_eyebrow">MOROCCAN HONEY</p>
+              <h1 class="hero__wordmark">AZAL <span>HONEY</span></h1>
+              <p class="hero__tagline" data-i18n="hero_tagline">خيرات بلادي، في كل قطرة</p>
+            </div>
+          </div>
+
+          <div class="hero__overlay hero__overlay--reveal" id="heroReveal">
+            <div class="hero__specs">
+              <p class="hero__eyebrow" data-i18n="hero_reveal_eyebrow">FRESH FROM THE LEMON BLOSSOM</p>
+              <h2 class="hero__product-name" data-i18n="product_lemon_name">عسل الليمون</h2>
+              <p class="hero__product-en" data-i18n="product_lemon_name_en">Lemon Honey</p>
+              <div class="hero__facts">
+                <span class="badge badge--hex" data-i18n="badge_natural">100% طبيعي</span>
+                <span class="hero__fact" data-i18n="hero_size">1Kg</span>
+                <span class="hero__dot" aria-hidden="true">•</span>
+                <span class="hero__fact hero__fact--price" id="heroPrice">80 درهم</span>
+              </div>
+              <a class="btn btn--gold btn--lg hero__cta" data-order href="https://wa.me/212663313457" target="_blank"
+                rel="noopener">
+                <span data-i18n="order_now">اطلب الآن</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <p class="hero__scrollhint" data-i18n="hero_scrollhint">اسحب للاكتشاف</p>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span>100% NATURAL</span><i>◆</i>
+          <span>عسل مغربي أصيل</span><i>◆</i>
+          <span>FREE DELIVERY — CASABLANCA</span><i>◆</i>
+          <span>من خيرات بلادي</span><i>◆</i>
+          <span>UNPASTEURIZED</span><i>◆</i>
+        </div>
+        <div class="marquee__group">
+          <span>100% NATURAL</span><i>◆</i>
+          <span>عسل مغربي أصيل</span><i>◆</i>
+          <span>FREE DELIVERY — CASABLANCA</span><i>◆</i>
+          <span>من خيرات بلادي</span><i>◆</i>
+          <span>UNPASTEURIZED</span><i>◆</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LEMON HONEY STORY ============ -->
+    <section class="feature" id="lemon">
+      <div class="feature__grid">
+        <div class="feature__media reveal">
+          <div class="feature__halo" aria-hidden="true"></div>
+          <img src="layout/limon.png" alt="AZAL Lemon Honey — عسل الليمون" width="896" height="1184" loading="lazy" />
+        </div>
+        <div class="feature__body">
+          <p class="eyebrow" data-i18n="feature_eyebrow">THE SIGNATURE JAR</p>
+          <h2 class="display-2" data-i18n="feature_title">عسل الليمون</h2>
+          <p class="display-en" data-i18n="feature_title_en">Lemon Honey</p>
+          <p class="lead" id="featureDesc">عسل طبيعي 100% مستخرج من زهور أشجار الليمون، بنكهة منعشة وفوائد مذهلة لجسمك
+            ومناعتك.</p>
+          <ul class="benefit-list">
+            <li id="benefit_1">يقوي المناعة</li>
+            <li id="benefit_2">يساعد على الهضم</li>
+            <li id="benefit_3">طاقة طبيعية ونشاط يومي</li>
+          </ul>
+          <div class="feature__meta">
+            <span class="badge badge--hex" data-i18n="badge_natural">100% طبيعي</span>
+            <span class="feature__price">1Kg — <strong id="featurePrice">80 درهم</strong></span>
+          </div>
+          <div class="feature__actions">
+            <a class="btn btn--gold" data-order href="https://wa.me/212663313457" target="_blank" rel="noopener">
+              <span data-i18n="order_now">اطلب الآن</span>
+            </a>
+            <a class="btn btn--ghost" href="tel:+212663313457">
+              <span data-i18n="call_now">اتصل بنا</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MOROCCAN STORY ============ -->
+    <section class="story" id="story">
+      <div class="story__ornament" aria-hidden="true">
+        <svg viewBox="0 0 100 100" width="64" height="64" fill="none" stroke="currentColor" stroke-width="1">
+          <path d="M50 4 L93 27 V73 L50 96 L7 73 V27 Z" />
+          <path d="M50 24 L72 36 V60 L50 72 L28 60 V36 Z" />
+          <circle cx="50" cy="48" r="6" />
+        </svg>
+      </div>
+      <p class="eyebrow" data-i18n="story_eyebrow">OUR ROOTS</p>
+      <h2 class="display-2 story__title" data-i18n="story_title">خيرات بلادي</h2>
+      <p class="story__tagline" data-i18n="story_tagline">العسل الصافي خيرات بلادي</p>
+      <p class="story__text" data-i18n="story_text">AZAL celebrates the natural treasures of Morocco — honeys gathered
+        from lemon blossoms, rare Daghmous flowers and carob trees, and oil pressed from this year's olives. Small
+        harvests, real flavors, brought to your table with pride.</p>
+      <div class="story__stats">
+        <div class="story__stat">
+          <strong data-i18n="stat_natural">100%</strong>
+          <span data-i18n="stat_natural_l">طبيعي</span>
+        </div>
+        <div class="story__stat">
+          <strong data-i18n="stat_origin">MOROCCO</strong>
+          <span data-i18n="stat_origin_l">منتج مغربي</span>
+        </div>
+        <div class="story__stat">
+          <strong data-i18n="stat_raw">RAW</strong>
+          <span data-i18n="stat_raw_l">غير مبستر</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCTS ============ -->
+    <section class="products" id="products">
+      <header class="products__head reveal">
+        <p class="eyebrow" data-i18n="products_eyebrow">THE COLLECTION</p>
+        <h2 class="display-2" data-i18n="products_title">من خيرات المغرب</h2>
+        <p class="display-en" data-i18n="products_title_en">From the richness of Morocco</p>
+      </header>
+      <div class="products__grid" id="productsGrid"><!-- rendered by JS --></div>
+    </section>
+
+    <!-- ============ QUALITY ============ -->
+    <section class="quality" id="quality">
+      <header class="quality__head reveal">
+        <p class="eyebrow" data-i18n="quality_eyebrow">OUR PROMISE</p>
+        <h2 class="display-2" data-i18n="quality_title">جودة نقسم بها</h2>
+        <p class="display-en" data-i18n="quality_title_en">Quality we stand behind</p>
+      </header>
+      <div class="quality__grid">
+        <div class="quality__item reveal">
+          <span class="quality__hex" aria-hidden="true"><svg viewBox="0 0 40 44" width="30" height="33">
+              <path d="M20 2 L36 12 V32 L20 42 L4 32 V12 Z" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <path d="M13 21 l5 5 l9 -10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span>
+          <h3 data-i18n="quality_1">100% طبيعي</h3>
+          <p data-i18n="quality_1_l">Natural</p>
+        </div>
+        <div class="quality__item reveal">
+          <span class="quality__hex" aria-hidden="true"><svg viewBox="0 0 40 44" width="30" height="33">
+              <path d="M20 2 L36 12 V32 L20 42 L4 32 V12 Z" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <path d="M13 21 l5 5 l9 -10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span>
+          <h3 data-i18n="quality_2">منتج مغربي بكل فخر</h3>
+          <p data-i18n="quality_2_l">Proudly Moroccan</p>
+        </div>
+        <div class="quality__item reveal">
+          <span class="quality__hex" aria-hidden="true"><svg viewBox="0 0 40 44" width="30" height="33">
+              <path d="M20 2 L36 12 V32 L20 42 L4 32 V12 Z" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <path d="M13 21 l5 5 l9 -10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span>
+          <h3 data-i18n="quality_3">غير مبستر</h3>
+          <p data-i18n="quality_3_l">Unpasteurized</p>
+        </div>
+        <div class="quality__item reveal">
+          <span class="quality__hex" aria-hidden="true"><svg viewBox="0 0 40 44" width="30" height="33">
+              <path d="M20 2 L36 12 V32 L20 42 L4 32 V12 Z" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <path d="M13 21 l5 5 l9 -10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span>
+          <h3 data-i18n="quality_4">مذاق طبيعي</h3>
+          <p data-i18n="quality_4_l">Natural taste</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ORDER / CONTACT ============ -->
+    <section class="order" id="contact">
+      <div class="order__inner">
+        <p class="eyebrow" data-i18n="order_eyebrow">ORDER IN A MOMENT</p>
+        <h2 class="display-2" data-i18n="order_title">اطلب الآن</h2>
+        <p class="order__sub" data-i18n="order_sub">Message us on WhatsApp and your order will be on its way.</p>
+        <div class="order__actions">
+          <a class="btn btn--gold btn--lg" href="https://wa.me/212663313457" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.6c.1-.2.1-.3 0-.5L9.3 8.5c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2 0-.2-.1-.3-.3-.4Z" />
+            </svg>
+            <span data-i18n="wa_order">WhatsApp — اطلب الآن</span>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="tel:+212663313457">
+            <span class="btn__tel">06 63 313 457</span>
+          </a>
+        </div>
+        <p class="order__note" data-i18n="order_note">التوصيل مجاني داخل الدار البيضاء</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="layout/logo.png" alt="AZAL" width="72" height="72" loading="lazy" />
+        <p class="footer__name">AZAL <span>HONEY</span></p>
+        <p class="footer__tagline" data-i18n="footer_tagline">العسل الصافي خيرات بلادي 🇲🇦</p>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="footer_products">المنتجات</h4>
+        <ul id="footerProducts"><!-- rendered by JS --></ul>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="footer_contact">تواصل معنا</h4>
+        <ul class="footer__contact">
+          <li><a href="tel:+212663313457">06 63 313 457</a></li>
+          <li><a href="https://instagram.com/azal__honey" target="_blank" rel="noopener">@azal__honey</a></li>
+          <li data-i18n="footer_delivery">توصيل مجاني داخل الدار البيضاء</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span id="year">2026</span> AZAL HONEY — <span data-i18n="footer_rights">جميع الحقوق محفوظة</span></p>
+      <p class="footer__madein" data-i18n="footer_madein">صُنع في المغرب بحب</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      /* ================= DATA ================= */
+
+      window.AZAL_DATA = {
+        "brand": { "name": "AZAL", "subtitle": "HONEY", "origin": "Morocco" },
+        "products": [
+          {
+            "id": 1, "category": "honey", "name_ar": "عسل الدغموس (الغريون)", "name_en": "Daghmous Honey (Al-Gharyoun)", "size": "1Kg",
+            "price": { "amount": 200, "currency": "درهم (MAD)" },
+            "description_ar": "عسل طبيعي 100% مستخرج من أزهار الدغموس الغريون النادرة، معروف بخصائصه القوية وفوائده العديدة للجسم.",
+            "description_en": "100% natural honey extracted from the rare Daghmous (Al-Gharyoun) flowers, known for its powerful properties and numerous benefits for the body.",
+            "benefits_ar": ["يقوي المناعة", "غني بمضادات الأكسدة", "يساعد على صحة الجهاز التنفسي", "يزيد النشاط والحيوية"],
+            "benefits_en": ["Strengthens immunity", "Rich in antioxidants", "Supports respiratory system health", "Increases energy and vitality"],
+            "footer_badges_ar": ["منتج مغربي بكل فخر", "غير مبستر يحافظ على خواصه"],
+            "footer_badges_en": ["Proudly Moroccan product", "Unpasteurized – keeps its natural properties"]
+          },
+          {
+            "id": 2, "category": "honey", "name_ar": "عسل الليمون", "name_en": "Lemon Honey", "size": "1Kg",
+            "price": { "amount": 80, "currency": "درهم (MAD)" },
+            "description_ar": "عسل طبيعي 100% مستخرج من زهور أشجار الليمون، بنكهة منعشة وفوائد مذهلة لجسمك ومناعتك.",
+            "description_en": "100% natural honey extracted from lemon tree blossoms, with a refreshing flavor and amazing benefits for your body and immunity.",
+            "benefits_ar": ["يقوي المناعة", "يساعد على الهضم", "طاقة طبيعية ونشاط يومي"],
+            "benefits_en": ["Strengthens immunity", "Aids digestion", "Natural energy and daily vitality"],
+            "footer_badges_ar": ["منتج مغربي", "غير مبستر"],
+            "footer_badges_en": ["Moroccan product", "Unpasteurized"]
+          },
+          {
+            "id": 3, "category": "honey", "name_ar": "عسل الخروب", "name_en": "Carob Honey", "size": "1Kg",
+            "price": { "amount": 150, "currency": "درهم (MAD)" },
+            "description_ar": "عسل طبيعي 100% مستخرج من أزهار شجر الخروب، يتميز بلونه الداكن ومذاقه الغني، غني بالمعادن ومضادات الأكسدة التي تعزز صحة الجسم.",
+            "description_en": "100% natural honey extracted from carob tree blossoms, distinguished by its dark color and rich taste, rich in minerals and antioxidants that boost the body's health.",
+            "benefits_ar": ["يقوي المناعة", "غني بمضادات الأكسدة", "يساعد على الهضم", "يعطي طاقة ونشاط طبيعي"],
+            "benefits_en": ["Strengthens immunity", "Rich in antioxidants", "Aids digestion", "Provides natural energy and vitality"],
+            "footer_badges_ar": ["منتج مغربي بكل فخر", "غير مبستر يحافظ على خواصه"],
+            "footer_badges_en": ["Proudly Moroccan product", "Unpasteurized – keeps its natural properties"]
+          },
+          {
+            "id": 4, "category": "oil", "name_ar": "زيت العود ديال هاد العام", "name_en": "Olive Oil – This Year's Harvest", "size": "1L",
+            "price": { "amount": 50, "currency": "درهم (MAD)" },
+            "description_ar": "زيت طبيعي 100% مستخرج من أجود ثمار الزيتون المغربية بعناية، على البارد للحفاظ على جميع خصائصه وفوائده.",
+            "description_en": "100% natural oil carefully extracted from the finest Moroccan olives, cold-pressed to preserve all its properties and benefits.",
+            "features_ar": ["جودة ممتازة", "عصر على البارد", "طبيعي 100%"],
+            "features_en": ["Excellent quality", "Cold-pressed", "100% natural"],
+            "footer_badges_ar": ["جودة عالية وفوائد عديدة", "عصر على البارد"],
+            "footer_badges_en": ["High quality and numerous benefits", "Cold-pressed to preserve quality"]
+          }
+        ]
+      };
+
+      /* ================= I18N ================= */
+
+      var DICT = {
+        en: {
+          nav_wordmark_sub: "HONEY", nav_home: "Home", nav_products: "Products",
+          nav_story: "Our Story", nav_contact: "Contact", lang_other: "العربية",
+          order_now: "Order Now", call_now: "Call us",
+          free_delivery: "Free delivery inside Casablanca",
+          hero_eyebrow: "Moroccan Honey",
+          hero_tagline: "Pure Moroccan goodness in every drop.",
+          hero_scrollhint: "Scroll to discover",
+          hero_reveal_eyebrow: "Fresh from the lemon blossom",
+          badge_natural: "100% Natural", hero_size: "1Kg",
+          product_lemon_name: "Lemon Honey", product_lemon_name_en: "عسل الليمون",
+          feature_eyebrow: "The Signature Jar", feature_title: "Lemon Honey",
+          feature_title_en: "LEMON HONEY",
+          story_eyebrow: "Our Roots", story_title: "Bounty of My Country",
+          story_tagline: "Pure honey, bounty of my land",
+          story_text: "AZAL celebrates the natural treasures of Morocco — honey gathered from lemon blossoms, rare Daghmous flowers and carob trees, and oil pressed from this year's olives. Small harvests, real flavors, delivered to your table with pride.",
+          stat_natural: "100%", stat_natural_l: "Natural",
+          stat_origin: "Morocco", stat_origin_l: "Proudly Moroccan",
+          stat_raw: "Raw", stat_raw_l: "Unpasteurized",
+          products_eyebrow: "The Collection", products_title: "From the richness of Morocco",
+          products_title_en: "THE COLLECTION",
+          quality_eyebrow: "Our Standard", quality_title: "Pure by nature",
+          quality_title_en: "THE QUALITY PROMISE",
+          quality_1: "100% Natural", quality_1_l: "Natural",
+          quality_2: "Proudly Moroccan", quality_2_l: "Moroccan",
+          quality_3: "Unpasteurized", quality_3_l: "Keeps its properties",
+          quality_4: "Natural taste", quality_4_l: "Authentic flavor",
+          order_eyebrow: "Order in a moment", order_title: "Order now",
+          order_sub: "Message us on WhatsApp and your order will be on its way.",
+          wa_order: "WhatsApp — Order now",
+          order_note: "Free delivery inside Casablanca",
+          footer_tagline: "Pure honey — the bounty of my country 🇲🇦",
+          footer_products: "Products", footer_contact: "Contact",
+          footer_delivery: "Free delivery inside Casablanca",
+          footer_rights: "All rights reserved",
+          footer_madein: "Made in Morocco with love",
+          wa_msg: "Hello, I'd like to order"
+        },
+        ar: {
+          nav_wordmark_sub: "عسل", nav_home: "الرئيسية", nav_products: "المنتجات",
+          nav_story: "قصتنا", nav_contact: "تواصل معنا", lang_other: "EN",
+          order_now: "اطلب الآن", call_now: "اتصل بنا",
+          free_delivery: "توصيل مجاني داخل الدار البيضاء",
+          hero_eyebrow: "عسل مغربي أصيل",
+          hero_tagline: "خيرات بلادي، في كل قطرة",
+          hero_scrollhint: "اسحب للاكتشاف",
+          hero_reveal_eyebrow: "طازج من زهور أشجار الليمون",
+          badge_natural: "100% طبيعي", hero_size: "1Kg",
+          product_lemon_name: "عسل الليمون", product_lemon_name_en: "Lemon Honey",
+          feature_eyebrow: "منتوجنا المميز", feature_title: "عسل الليمون",
+          feature_title_en: "Lemon Honey",
+          story_eyebrow: "جذورنا", story_title: "خيرات بلادي",
+          story_tagline: "العسل الصافي خيرات بلادي",
+          story_text: "تحتفل AZAL بالكنوز الطبيعية للمغرب — عسل من زهور أشجار الليمون وأزهار الدغموس النادرة وشجر الخروب، وزيت معصور من زيتون هذا العام. كميات صغيرة، نكهات حقيقية، تصل إلى مائدتكم بكل فخر.",
+          stat_natural: "100%", stat_natural_l: "طبيعي",
+          stat_origin: "المغرب", stat_origin_l: "منتج مغربي",
+          stat_raw: "خام", stat_raw_l: "غير مبستر",
+          products_eyebrow: "المجموعة", products_title: "من خيرات المغرب",
+          products_title_en: "From the richness of Morocco",
+          quality_eyebrow: "معيارنا", quality_title: "جودة نقسم بها",
+          quality_title_en: "Quality we stand behind",
+          quality_1: "100% طبيعي", quality_1_l: "طبيعي",
+          quality_2: "منتج مغربي بكل فخر", quality_2_l: "منتج مغربي",
+          quality_3: "غير مبستر", quality_3_l: "يحافظ على خواصه",
+          quality_4: "مذاق طبيعي", quality_4_l: "نكهة أصيلة",
+          order_eyebrow: "اطلب في لحظات", order_title: "اطلب الآن",
+          order_sub: "راسلنا على واتساب وسيصلك طلبك في أسرع وقت.",
+          wa_order: "واتساب — اطلب الآن",
+          order_note: "التوصيل مجاني داخل الدار البيضاء",
+          footer_tagline: "العسل الصافي خيرات بلادي 🇲🇦",
+          footer_products: "المنتجات", footer_contact: "تواصل معنا",
+          footer_delivery: "توصيل مجاني داخل الدار البيضاء",
+          footer_rights: "جميع الحقوق محفوظة",
+          footer_madein: "صُنع في المغرب بحب",
+          wa_msg: "السلام عليكم، أريد طلب"
+        }
+      };
+
+      var PHONE_DISPLAY = "06 63 313 457";
+      var PHONE_INTL = "+212663313457";
+      var WA_BASE = "https://wa.me/212663313457";
+      var STORAGE_KEY = "azal-lang";
+
+      function detectLang() {
+        try {
+          var saved = localStorage.getItem(STORAGE_KEY);
+          if (saved === "ar" || saved === "en") return saved;
+        } catch (e) { }
+        return (navigator.language || "en").toLowerCase().indexOf("ar") === 0 ? "ar" : "en";
+      }
+
+      var currentLang = detectLang();
+      var langListeners = [];
+
+      function t(key) {
+        return (DICT[currentLang] && DICT[currentLang][key]) || DICT.en[key] || key;
+      }
+      function formatPrice(amount) {
+        return currentLang === "ar" ? amount + " درهم" : amount + " MAD";
+      }
+      function waLink(product) {
+        var name = currentLang === "ar" ? product.name_ar : product.name_en;
+        return WA_BASE + "?text=" + encodeURIComponent(t("wa_msg") + ": " + name + " (" + product.size + ")");
+      }
+      function onLangChange(fn) { langListeners.push(fn); }
+
+      function applyI18n(root) {
+        root = root || document;
+        var els = root.querySelectorAll("[data-i18n]");
+        for (var i = 0; i < els.length; i++) {
+          var key = els[i].getAttribute("data-i18n");
+          if (key) els[i].textContent = t(key);
+        }
+      }
+
+      function setLang(lang) {
+        if (lang !== "ar" && lang !== "en") return;
+        currentLang = lang;
+        try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { }
+        var html = document.documentElement;
+        html.lang = lang;
+        html.dir = lang === "ar" ? "rtl" : "ltr";
+        document.title = t("nav_home") + " — AZAL Honey";
+        applyI18n();
+        var toggle = document.getElementById("langToggle");
+        if (toggle) {
+          var other = toggle.querySelector(".lang-toggle__other");
+          var cur = toggle.querySelector(".lang-toggle__current");
+          if (other) other.textContent = t("lang_other");
+          if (cur) cur.textContent = lang === "ar" ? "ع" : "EN";
+        }
+        for (var i = 0; i < langListeners.length; i++) langListeners[i](lang);
+      }
+
+      /* ================= PRODUCTS ================= */
+
+      var IMAGES = {
+        1: "layout/daghmoss.png",
+        2: "layout/limon.png",
+        3: "layout/carob.png",
+        4: "layout/oil.png"
+      };
+
+      function escapeHtml(str) {
+        return String(str)
+          .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+
+      function productCard(product, index) {
+        var ar = currentLang === "ar";
+        var name = ar ? product.name_ar : product.name_en;
+        var desc = ar ? product.description_ar : product.description_en;
+        var benefits = ar ? (product.benefits_ar || product.features_ar || [])
+          : (product.benefits_en || product.features_en || []);
+        var badges = ar ? (product.footer_badges_ar || []).slice(0, 2)
+          : (product.footer_badges_en || []).slice(0, 2);
+        var img = IMAGES[product.id] || IMAGES[1];
+        return (
+          '<article class="product reveal" style="transition-delay:' + (index % 2) * 90 + 'ms">' +
+          '<figure class="product__media">' +
+          '<img src="' + img + '" alt="' + escapeHtml(name) + '" width="896" height="1184" loading="lazy" />' +
+          '<div class="product__badges">' +
+          badges.map(function (b) { return '<span class="product__badge">' + escapeHtml(b) + "</span>"; }).join("") +
+          "</div></figure>" +
+          '<div class="product__body">' +
+          '<p class="product__meta"><span>' + escapeHtml(product.size) + "</span>" +
+          '<span class="product__dot">•</span>' +
+          '<span class="product__price">' + formatPrice(product.price.amount) + "</span></p>" +
+          '<h3 class="product__name">' + escapeHtml(name) + "</h3>" +
+          '<p class="product__name-en">' + escapeHtml(ar ? product.name_en : product.name_ar) + "</p>" +
+          '<p class="product__desc">' + escapeHtml(desc) + "</p>" +
+          '<ul class="benefit-list">' +
+          benefits.map(function (b) { return "<li>" + escapeHtml(b) + "</li>"; }).join("") +
+          "</ul>" +
+          '<div class="product__actions">' +
+          '<a class="btn btn--gold" href="' + waLink(product) + '" target="_blank" rel="noopener">' +
+          "<span>" + t("order_now") + "</span></a>" +
+          '<a class="btn btn--ghost" href="tel:' + PHONE_INTL + '">' +
+          "<span>" + t("call_now") + "</span></a>" +
+          "</div></div></article>"
+        );
+      }
+
+      function renderProducts() {
+        var grid = document.getElementById("productsGrid");
+        if (!grid) return;
+        grid.innerHTML = window.AZAL_DATA.products.map(productCard).join("");
+      }
+
+      function renderFooterProducts() {
+        var list = document.getElementById("footerProducts");
+        if (!list) return;
+        var ar = currentLang === "ar";
+        list.innerHTML = window.AZAL_DATA.products
+          .map(function (p) { return "<li>" + escapeHtml(ar ? p.name_ar : p.name_en) + "</li>"; })
+          .join("");
+      }
+
+      /* ================= REVEAL ================= */
+
+      function initReveals(scope) {
+        scope = scope || document;
+        var els = scope.querySelectorAll(".reveal:not(.is-in)");
+        if (!("IntersectionObserver" in window)) {
+          for (var i = 0; i < els.length; i++) els[i].classList.add("is-in");
+          return;
+        }
+        var io = new IntersectionObserver(function (entries) {
+          for (var j = 0; j < entries.length; j++) {
+            if (entries[j].isIntersecting) {
+              entries[j].target.classList.add("is-in");
+              io.unobserve(entries[j].target);
+            }
+          }
+        }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+        for (var k = 0; k < els.length; k++) io.observe(els[k]);
+      }
+
+      /* ================= NAV ================= */
+
+      function initNav() {
+        var nav = document.getElementById("navbar");
+        var burger = document.getElementById("navBurger");
+        var menu = document.getElementById("mobileMenu");
+        var body = document.body;
+        var lastY = window.scrollY;
+
+        function onScroll() {
+          var y = window.scrollY;
+          var down = y > lastY;
+          lastY = y;
+          nav.classList.toggle("nav--scrolled", y > 24);
+          if (menu.classList.contains("is-open")) return;
+          if (y > 480 && down) nav.classList.add("nav--hidden");
+          else nav.classList.remove("nav--hidden");
+        }
+        function closeMenu() {
+          menu.classList.remove("is-open");
+          burger.setAttribute("aria-expanded", "false");
+          body.style.overflow = "";
+          setTimeout(function () {
+            if (!menu.classList.contains("is-open")) menu.hidden = true;
+          }, 450);
+        }
+        function openMenu() {
+          menu.hidden = false;
+          requestAnimationFrame(function () {
+            menu.classList.add("is-open");
+            burger.setAttribute("aria-expanded", "true");
+            body.style.overflow = "hidden";
+          });
+        }
+        burger.addEventListener("click", function () {
+          if (menu.classList.contains("is-open")) closeMenu();
+          else openMenu();
+        });
+        var links = menu.querySelectorAll("a");
+        for (var i = 0; i < links.length; i++) links[i].addEventListener("click", closeMenu);
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && menu.classList.contains("is-open")) closeMenu();
+        });
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+      }
+
+      /* ================= HERO — SMOOTH CANVAS SCROLL SEQUENCE ================= */
+
+      var FRAME_COUNT = 31;
+      var SMALL_BP = 768;
+
+      function pad(i) { return ("000" + i).slice(-3); }
+      function clamp01(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
+
+      var heroEl = document.getElementById("heroStage");
+      var heroBg = document.getElementById("hero");
+
+      function useSmall() { return window.innerWidth <= SMALL_BP; }
+      function frameURL(i) {
+        return (useSmall() ? "AZAL_Lemon_Ho_frames/mobile/frame_" : "AZAL_Lemon_Ho_frames/frame_") + pad(i) + (useSmall() ? ".jpg" : ".png");
+      }
+
+      function initHero() {
+        if (!heroEl || !heroBg) return;
+
+        var canvas = document.createElement("canvas");
+        canvas.style.position = "absolute";
+        canvas.style.inset = "0";
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+        canvas.style.objectFit = "cover";
+        canvas.style.zIndex = "0";
+        canvas.style.pointerEvents = "none";
+        heroBg.insertBefore(canvas, heroBg.firstChild);
+
+        var ctx = canvas.getContext("2d");
+        var images = new Array(FRAME_COUNT);
+        var ready = new Array(FRAME_COUNT).fill(false);
+        var isSmall = useSmall();
+
+        function loadAllFrames() {
+          var start = Math.round(getScrollProgress() * (FRAME_COUNT - 1));
+          for (var k = 0; k < FRAME_COUNT; k++) {
+            (function (idx) {
+              var img = new Image();
+              img.decoding = "async";
+              img.onload = function () {
+                images[idx - 1] = img;
+                ready[idx - 1] = true;
+              };
+              img.src = frameURL(idx);
+            })(((start + k) % FRAME_COUNT) + 1);
+          }
+        }
+        loadAllFrames();
+
+        var dpr = Math.min(window.devicePixelRatio || 1, 2);
+        var cw = 0, ch = 0;
+
+        function resizeCanvas() {
+          var rect = heroBg.getBoundingClientRect();
+          dpr = Math.min(window.devicePixelRatio || 1, 2);
+          cw = Math.max(1, Math.round(rect.width * dpr));
+          ch = Math.max(1, Math.round(rect.height * dpr));
+          canvas.width = cw;
+          canvas.height = ch;
+        }
+        resizeCanvas();
+        window.addEventListener("resize", function () {
+          var smallNow = useSmall();
+          if (smallNow !== isSmall) {
+            isSmall = smallNow;
+            loadAllFrames();
+          }
+          resizeCanvas();
+        }, { passive: true });
+
+        var targetProgress = 0;
+        var currentProgress = 0;
+        var drawnFloat = -1;
+        var lastTime = 0;
+
+        function getScrollProgress() {
+          var rect = heroEl.getBoundingClientRect();
+          var range = Math.max(rect.height - window.innerHeight, 1);
+          return clamp01(-rect.top / range);
+        }
+
+        function updateOverlays(p) {
+          var intro = document.getElementById("heroIntro");
+          var reveal = document.getElementById("heroReveal");
+          if (!intro || !reveal) return;
+          var io = clamp01(1 - p / 0.18);
+          var rp = clamp01((p - 0.8) / 0.14);
+          intro.style.opacity = io.toFixed(3);
+          reveal.style.opacity = rp.toFixed(3);
+          reveal.style.transform = "translate3d(0, " + (1 - rp) * 26 + "px, 0)";
+          reveal.style.pointerEvents = rp > 0.5 ? "auto" : "none";
+        }
+
+        function drawSingleImg(img) {
+          if (!img) return;
+          var sx = 0, sy = 0, sw = img.naturalWidth, sh = img.naturalHeight;
+          var scale = Math.max(cw / sw, ch / sh);
+          var dw = sw * scale;
+          var dh = sh * scale;
+          var dx = (cw - dw) / 2;
+          var dy = (ch - dh) / 2;
+          ctx.drawImage(img, sx, sy, sw, sh, dx, dy, dw, dh);
+        }
+
+        function renderFrame(f) {
+          f = Math.max(0, Math.min(FRAME_COUNT - 1, f));
+          var i = Math.floor(f);
+          var frac = f - i;
+
+          if (ready[i]) {
+            ctx.globalAlpha = 1;
+            ctx.fillStyle = "#bdb8b0";
+            ctx.fillRect(0, 0, cw, ch);
+            drawSingleImg(images[i]);
+            if (frac > 0.001 && ready[i + 1]) {
+              ctx.globalAlpha = frac;
+              drawSingleImg(images[i + 1]);
+              ctx.globalAlpha = 1;
+            }
+            drawnFloat = f;
+          } else {
+            for (var j = i; j >= 0; j--) {
+              if (ready[j]) {
+                ctx.globalAlpha = 1;
+                ctx.fillStyle = "#bdb8b0";
+                ctx.fillRect(0, 0, cw, ch);
+                drawSingleImg(images[j]);
+                drawnFloat = j;
+                return;
+              }
+            }
+          }
+        }
+
+        function animLoop(timestamp) {
+          targetProgress = getScrollProgress();
+          updateOverlays(targetProgress);
+
+          if (!lastTime) lastTime = timestamp || performance.now();
+          var now = timestamp || performance.now();
+          var dt = Math.min((now - lastTime) / 1000, 0.064);
+          lastTime = now;
+
+          var factor = 1 - Math.exp(-16 * dt);
+          currentProgress += (targetProgress - currentProgress) * factor;
+
+          if (Math.abs(targetProgress - currentProgress) < 0.0001) {
+            currentProgress = targetProgress;
+          }
+
+          var floatFrame = currentProgress * (FRAME_COUNT - 1);
+          if (Math.abs(floatFrame - drawnFloat) > 0.0005) {
+            renderFrame(floatFrame);
+          }
+
+          requestAnimationFrame(animLoop);
+        }
+
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          updateOverlays(0);
+          renderFrame(0);
+        } else {
+          requestAnimationFrame(animLoop);
+        }
+      }
+
+      /* ================= BOOT ================= */
+
+      function lemonProduct() {
+        for (var i = 0; i < window.AZAL_DATA.products.length; i++) {
+          if (window.AZAL_DATA.products[i].id === 2) return window.AZAL_DATA.products[i];
+        }
+        return null;
+      }
+
+      function applyDynamic() {
+        var p = lemonProduct();
+        if (p) {
+          var ar = currentLang === "ar";
+          var desc = document.getElementById("featureDesc");
+          if (desc) desc.textContent = ar ? p.description_ar : p.description_en;
+          var benefits = ar ? p.benefits_ar : p.benefits_en;
+          for (var b = 0; b < benefits.length; b++) {
+            var el = document.getElementById("benefit_" + (b + 1));
+            if (el) el.textContent = benefits[b];
+          }
+          var heroPrice = document.getElementById("heroPrice");
+          if (heroPrice) heroPrice.textContent = formatPrice(p.price.amount);
+          var featurePrice = document.getElementById("featurePrice");
+          if (featurePrice) featurePrice.textContent = formatPrice(p.price.amount);
+          var links = document.querySelectorAll("[data-order]");
+          for (var l = 0; l < links.length; l++) links[l].href = waLink(p);
+        }
+        var tels = document.querySelectorAll('a[href^="tel:"]');
+        for (var tIdx = 0; tIdx < tels.length; tIdx++) tels[tIdx].href = "tel:" + PHONE_INTL;
+        renderProducts();
+        renderFooterProducts();
+        initReveals();
+      }
+
+      function init() {
+        setLang(currentLang);
+        var langToggle = document.getElementById("langToggle");
+        if (langToggle) {
+          langToggle.addEventListener("click", function () {
+            setLang(currentLang === "ar" ? "en" : "ar");
+          });
+        }
+        initNav();
+        initHero();
+        applyDynamic();
+        onLangChange(applyDynamic);
+        var year = document.getElementById("year");
+        if (year) year.textContent = String(new Date().getFullYear());
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+</body>
+
+</html>
